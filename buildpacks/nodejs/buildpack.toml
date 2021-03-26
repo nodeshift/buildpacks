@@ -1,0 +1,15 @@
+# Buildpack API version
+api = "0.2"
+
+# Buildpack ID and metadata
+[buildpack]
+id = "com.redhat.buildpack.nodejs"
+version = "0.0.1"
+name = "Red Hat Node.js Buildpack"
+
+# Stacks that the buildpack will work with
+[[stacks]]
+id = "com.redhat.stacks.ubi8-nodejs-12"
+
+[[stacks]]
+id = "com.redhat.stacks.ubi8-nodejs-14"
