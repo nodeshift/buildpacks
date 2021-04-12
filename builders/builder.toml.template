@@ -1,0 +1,17 @@
+# Buildpacks to include in builder
+[[buildpacks]]
+uri = "../../buildpacks/nodejs"
+
+# Order used for detection
+[[order]]
+    [[order.group]]
+    id = "com.redhat.buildpack.nodejs"
+    version = "0.0.1"
+
+# Stack that will be used by the builder
+[stack]
+id = "com.redhat.stacks.ubiUBI_VERSION-nodejs-NODE_JS_VERSION"
+# This image is used at runtime
+run-image =   "registry.access.redhat.com/ubiUBI_VERSION/nodejs-NODE_JS_VERSIONPOSTFIX"
+# This image is used at build-time
+build-image = "registry.access.redhat.com/ubiUBI_VERSION/nodejs-NODE_JS_VERSIONPOSTFIX"
