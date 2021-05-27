@@ -2,7 +2,21 @@
 [[buildpacks]]
 uri = "../../buildpacks/nodejs"
 
-# Order used for detection
+[[buildpacks]]
+id = "dev.boson.nodejs"
+image = "quay.io/boson/faas-nodejs-bp"
+
+[[buildpacks]]
+id = "dev.boson.typescript"
+image = "quay.io/boson/faas-typescript-bp"
+
+[[order]]
+    [[order.group]]
+    id = "dev.boson.nodejs"
+    [[order.group]]
+    id = "dev.boson.typescript"
+    optional = true
+
 [[order]]
     [[order.group]]
     id = "com.redhat.buildpack.nodejs"
