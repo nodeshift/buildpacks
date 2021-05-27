@@ -41,9 +41,9 @@ how to run the builder which includes the build pack. For
 example:
 
 ```bash
-user1@user1-VirtualBox:~/demos/buildpacks/builders$ bash create.sh 8 12 -fixed
-Successfully created builder image nodejs-12_ubi-8_builder
-Tip: Run pack build <image-name> --builder nodejs-12_ubi-8_builder to use this builder
+user1@user1-VirtualBox:~/demos/buildpacks/builders$ bash create.sh 8 14
+Successfully created builder image nodejs-14_ubi-8_builder
+Tip: Run pack build <image-name> --builder nodejs-14_ubi-8_builder to use this builder
 ```
 
 ## Use the builder/buildpack
@@ -55,7 +55,7 @@ For example using the nodejs-rest-http  nodeshift-starter :
 
 * git clone https://github.com/nodeshift-starters/nodejs-rest-http.git
 * cd nodejs-rest-http
-* pack build test-image --builder nodejs-12_ubi-8_builder
+* pack build test-image --builder nodejs-14_ubi-8_builder
 * docker run -p 8080:8080 -d -t test-image
 
 The nodejs-rest-http nodeshift-starter will now be running and you
