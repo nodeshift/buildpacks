@@ -18,11 +18,21 @@ here: https://buildpacks.io/docs/tools/pack/
 
 ## Suitable build images
 
-Currently only the ubi8/Nodejs-14 and ubi8/Nodejs-14-minimal
-images have the required metadata and are suitable for use
-with the build pack. You could use it with other images,
-but you would have to build those yourself and add
-the required buildpack metadata.
+No suitable build images exist today with the appropriate
+metadata needed for the buildpacks. You will need to
+create these images by doing the following:
+
+```bash
+cd create-images
+bash create-images.sh
+```
+
+This will create `fixed` images to which the buildpack
+metadata has been added. These images are:
+
+REPOSITORY                                           TAG
+ubi8/nodejs-14-fixed                                 latest
+ubi8/nodejs-14-minimal-fixed                         latest
 
 ## Create builder
 
@@ -32,9 +42,10 @@ do the following:
 * cd builders
 * execute `bash create.sh X Y -fixed` where X is the ubi version
   you want to use and Y is the Node.js version you want to use.
-  (As noted currently this should only be ubi 8 and Node.js 14)
-  For example `bash create.sh 8 14`. You must have
-  prepared a matching image in the step above.
+  Currently this should only be ubi 8 and Node.js 14 ie:
+  `bash create.sh 8 14 -fixed`. You must have
+  prepared a matching image in the step above titled
+  `suitable build images`.
 
 The output of this step will be a message that tells you
 how to run the builder which includes the build pack. For

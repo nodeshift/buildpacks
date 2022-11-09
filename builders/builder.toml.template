@@ -12,6 +12,6 @@ uri = "../../buildpacks/nodejs"
 [stack]
 id = "com.redhat.stacks.ubiUBI_VERSION-nodejs-NODE_JS_VERSION"
 # This image is used at runtime
-run-image =   "registry.access.redhat.com/ubiUBI_VERSION/nodejs-NODE_JS_VERSION-minimalPOSTFIX"
+run-image =   "ubiUBI_VERSION/nodejs-NODE_JS_VERSION-minimalPOSTFIX"
 # This image is used at build-time
-build-image = "registry.access.redhat.com/ubiUBI_VERSION/nodejs-NODE_JS_VERSIONPOSTFIX"
+build-image = "ubiUBI_VERSION/nodejs-NODE_JS_VERSIONPOSTFIX"
